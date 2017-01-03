@@ -1,0 +1,14 @@
+.square {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    
+}
+table, td {
+    border: 0px;
+    border-collapse: collapse;
+    padding: 0px;
+}
+.red {
+    background-color: red;
+}

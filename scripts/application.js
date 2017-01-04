@@ -1,8 +1,12 @@
 /* global $ */
 
-var boardSize = 5020;
+var boardSize = 20;
+var squareSize = 400/boardSize;
 $(document).ready(function() {
-    printBoard(boardSize);
+    
+    // if (($('table').length) === 0) {
+        printBoard(boardSize);
+    // }
     
     $('.square').on('mouseenter', function() {
     	$(this).css('background-color', 'blue');
@@ -10,6 +14,13 @@ $(document).ready(function() {
     $('.square').on('click', function() {
     	$(this).css('background-color', 'red');
     });
+    // $('#button').click(function() {
+    //     var grid = parseInt(prompt("How dense should be your new awesome board? Please type a number between 1 and 64:"));
+    //     $('.square').remove();
+    //     boardSize = grid;
+    //     printBoard(boardSize);
+    // });
+    
 });
 
 function printBoard(i_BoardSize) {
@@ -17,36 +28,14 @@ function printBoard(i_BoardSize) {
     var maxCol = parseInt(i_BoardSize);
     // var num = 1;
 
-    var myTable = $("<table></table>").appendTo("#container");
+    var myTable = $('<div id="board"></div>').appendTo("#container");
     for (var row = maxRow - 1; row >= 0; row--) {
-        var myRow = $("<tr></tr>").appendTo(myTable);
+        var myRow = $('<div class="row"></tr>').appendTo(myTable);
         for (var col = 0; col < maxCol; col++) {
-            myRow.append('<td class="square"></td>');
+            myRow.append('<div class="square"></td>');
+            $('.square').css({'width': squareSize, 'height': squareSize});
+            $('.row').css('height', squareSize);
         }
     }
 }
-
-// var ctr = 0;
-// $(document).ready(function () {
-//      for (var i = 1; i <= 16; i++) {
-//          for (var j = 1; j <= 16; j++) {
-//             //  var currentLine = $('.line').append(i);
-//              $('.container').append('<div id=line' + i '" class="square"></div>');
-//             //  ctr += 1;
-//          }
-//      }
-//  });
-
-// for (i = 1; i <= 16; i++) {
-//     for (j = 1; j<= 16; j++) {
-//         document.getElementById()
-//     }
-// }
-
-
-
-// loop 16 times
-//     loop 16 times
-//         create one div
-//     create div container for next line of 16 divs
 

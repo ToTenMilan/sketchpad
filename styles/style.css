@@ -1,8 +1,18 @@
-button {
-    position: fixed;
-    left: 30%;
-    top: 10px;
+/*#button {*/
+/*    position: fixed;*/
+/*    left: 30%;*/
+/*    top: 10px;*/
+/*}*/
+/*#blue {*/
+/*    position: fixed;*/
+/*    left: 40%;*/
+/*    top: 10px;*/
+/*}*/
+#colors {
+    width: 50%;
+    margin: 0 auto; 
 }
+
 #container {
     width: 400px;
     height: 400px;
@@ -14,7 +24,7 @@ button {
     /*align-items: center;*/
     border: 20px solid #de1d20;
     display: -webkit-flex; /* Safari */
-    -webkit-align-items: center; /* Safari 7.0+ */
+    -webkit-align-items: stretch; /* Safari 7.0+ */
     display: flex;
     align-items: stretch;
 }

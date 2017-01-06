@@ -28,6 +28,7 @@ button {
     /*float: left;*/
     background-color: #f3f3f3;
     flex: 1;
+    opacity: .1;
 }
 /*table, td {*/
 /*    border: 0px;*/

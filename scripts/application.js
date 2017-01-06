@@ -7,7 +7,13 @@ $(document).ready(function() {
     printBoard(boardSize);
     
     $('#container').on('mouseenter', '.square', function() {
-    	$(this).css('background-color', 'blue');
+        
+    	$(this).css({'background-color': 'red'});
+    	var opacity = +$(this).css('opacity');
+    	if (opacity < 1) {
+    	    opacity += 0.1;
+    	    $(this).css('opacity', opacity);
+    	}
     });
     // $('.square').on('click', function() {
     // 	$(this).css('background-color', 'red');
